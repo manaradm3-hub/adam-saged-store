@@ -1,1 +1,28 @@
-body{font-family:Arial;background:linear-gradient(#f8f2ff,#fff);display:flex;justify-content:center}.card{max-width:420px;margin:20px;padding:20px;background:#ffffffdd;border-radius:20px;text-align:center}.logo{max-width:220px}.b{display:block;margin:10px;padding:14px;background:#9b6bd6;color:#fff;text-decoration:none;border-radius:12px}.w{background:#25D366}.i{background:#C13584}.t{background:#000}
+body{font-family:Arial;background:linear-gradient(#f8f2ff,#fff);display:flex;justify-content:center}.card{max-width:420px;margin:20px;padding:20px;background:#ffffffdd;border-radius:20px;text-align:center}.logo{max-width:220px}.b{display:block;margin:10px;padding:14px;background:#9b6bd6;color:#fff;text-decoration:none;border-radius:12px}.w{background:#25D366}.i{background:#C13584}.t{background:#000}. .navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 30px;
+background:white;
+box-shadow:0 3px 12px rgba(0,0,0,.08);
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+color:#8b5cf6;
+}
+
+.menu a{
+margin:0 10px;
+text-decoration:none;
+color:#555;
+font-weight:bold;
+}
+
+.menu a:hover{
+color:#8b5cf6;
+} 
