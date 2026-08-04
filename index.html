@@ -544,7 +544,21 @@ href="https://wa.me/201019201338">
 💬 تواصلي عبر واتساب
 
 </a>
+<button class="share-btn" onclick="shareWebsite()">
+<i class="fa-solid fa-share-nodes"></i> شاركي المتجر مع صديقاتك
+</button>
 
+<script>
+function shareWebsite() {
+  if (navigator.share) {
+    navigator.share({
+      title: "ADAM & SAGED STORE 💜",
+      text: "✨ اكتشفي أحدث موديلات البنات من ADAM & SAGED STORE",
+      url: "https://manaradm3-hub.github.io/adam-saged-store/"
+    });
+  }
+}
+</script>
 </body>
 
 </html>
