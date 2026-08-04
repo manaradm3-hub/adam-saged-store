@@ -38,3 +38,35 @@ text-decoration:none;
 font-weight:bold;
 box-shadow:0 8px 20px rgba(0,0,0,.2);
 } 
+@media (max-width:768px){
+
+.navbar{
+display:flex;
+flex-direction:column;
+padding:15px;
+}
+
+.logo{
+margin-bottom:10px;
+font-size:26px;
+}
+
+.menu{
+display:flex;
+gap:15px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.menu a{
+margin:0;
+font-size:18px;
+}
+
+.whatsapp{
+left:50%;
+transform:translateX(-50%);
+bottom:20px;
+}
+
+}
