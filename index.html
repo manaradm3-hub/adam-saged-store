@@ -19,7 +19,36 @@ padding:0;
 box-sizing:border-box;
 scroll-behavior:smooth;
 }
+<button class="share-btn" onclick="shareSite()">
+<i class="fa-solid fa-share-nodes"></i>
+مشاركة الموقع
+</button>
 
+<script>
+function shareSite(){
+
+if(navigator.share){
+
+navigator.share({
+
+title:"ADAM & SAGED STORE",
+
+text:"زوروا متجر ADAM & SAGED",
+
+url:"https://manaradm3-hub.github.io/adam-saged-store/"
+
+});
+
+}else{
+
+navigator.clipboard.writeText("https://manaradm3-hub.github.io/adam-saged-store/");
+
+alert("تم نسخ رابط الموقع");
+
+}
+
+}
+</script>
 body{
 
 font-family:'Cairo',sans-serif;
