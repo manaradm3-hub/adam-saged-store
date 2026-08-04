@@ -1,129 +1,505 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Adam & Saged Store</title>
+
+<title>ADAM & SAGED STORE</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-body{
+
+*{
 margin:0;
-font-family:Tahoma,sans-serif;
-background:#f8f3ff;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:'Cairo',sans-serif;
+
+background:linear-gradient(135deg,#faf5ff,#efe7ff,#ffffff);
+
+min-height:100vh;
+
+overflow-x:hidden;
+
 color:#444;
-text-align:center;
+
+}
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+width:500px;
+
+height:500px;
+
+background:#d9b8ff;
+
+filter:blur(180px);
+
+top:-180px;
+
+right:-180px;
+
+opacity:.35;
+
+z-index:-1;
+
+}
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+width:450px;
+
+height:450px;
+
+background:#f3d7ff;
+
+filter:blur(180px);
+
+bottom:-180px;
+
+left:-180px;
+
+opacity:.4;
+
+z-index:-1;
+
 }
 
 header{
-padding:40px 20px;
+
+padding:60px 25px;
+
+text-align:center;
+
+animation:fadeDown 1s ease;
+
 }
 
-header img{
-width:220px;
+.logo{
+
+width:230px;
+
 max-width:90%;
+
+border-radius:25px;
+
+box-shadow:0 20px 50px rgba(140,92,246,.25);
+
+transition:.4s;
+
+}
+
+.logo:hover{
+
+transform:scale(1.05);
+
 }
 
 h1{
-color:#8b5cf6;
+
+margin-top:25px;
+
 font-size:38px;
-margin:10px 0;
+
+color:#8b5cf6;
+
 }
 
-p{
-font-size:18px;
+.subtitle{
+
+margin-top:15px;
+
+font-size:20px;
+
+color:#777;
+
 line-height:1.8;
-padding:0 20px;
+
+}
+
+.buttons{
+
+margin-top:35px;
+
+display:flex;
+
+flex-direction:column;
+
+gap:18px;
+
+align-items:center;
+
 }
 
 .btn{
-display:inline-block;
-margin-top:30px;
-padding:15px 35px;
-background:#8b5cf6;
-color:white;
+
+width:90%;
+
+max-width:360px;
+
+padding:18px;
+
+border-radius:50px;
+
 text-decoration:none;
-border-radius:40px;
+
 font-size:20px;
+
 font-weight:bold;
+
+transition:.35s;
+
+color:white;
+
+box-shadow:0 12px 30px rgba(0,0,0,.15);
+
 }
 
-.section{
-padding:40px 20px;
+.whatsapp{
+
+background:#25D366;
+
+}
+
+.call{
+
+background:#8b5cf6;
+
+}
+
+.instagram{
+
+background:linear-gradient(45deg,#f09433,#dc2743,#bc1888);
+
+}
+
+.tiktok{
+
+background:#111;
+
+}
+
+.btn:hover{
+
+transform:translateY(-5px);
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+
+gap:22px;
+
+padding:30px;
+
+max-width:1100px;
+
+margin:auto;
+
 }
 
 .card{
-background:white;
-max-width:700px;
-margin:auto;
-padding:25px;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+background:rgba(255,255,255,.7);
+
+backdrop-filter:blur(18px);
+
+border-radius:25px;
+
+padding:28px;
+
+text-align:center;
+
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+transition:.35s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.icon{
+
+font-size:45px;
+
+margin-bottom:18px;
+
+}
+
+.card h3{
+
+color:#8b5cf6;
+
+margin-bottom:12px;
+
+}
+
+.card p{
+
+line-height:1.8;
+
+color:#666;
+
 }
 
 footer{
-padding:30px;
+
+margin-top:50px;
+
+padding:35px;
+
+text-align:center;
+
 color:#777;
-font-size:15px;
+
+font-size:16px;
+
 }
+
+.floating{
+
+position:fixed;
+
+bottom:20px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+background:#25D366;
+
+color:white;
+
+padding:18px 30px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+box-shadow:0 15px 35px rgba(0,0,0,.2);
+
+z-index:999;
+
+animation:pulse 2s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{transform:translateX(-50%) scale(1);}
+
+50%{transform:translateX(-50%) scale(1.05);}
+
+100%{transform:translateX(-50%) scale(1);}
+
+}
+
+@keyframes fadeDown{
+
+from{
+
+opacity:0;
+
+transform:translateY(-40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@media(max-width:768px){
+
+h1{
+
+font-size:30px;
+
+}
+
+.subtitle{
+
+font-size:17px;
+
+}
+
+.btn{
+
+font-size:18px;
+
+}
+
+}
+
 </style>
 
 </head>
-<a class="whatsapp" href="https://wa.me/201019201338">
-💬 واتساب
-</a>
+
 <body>
-
-<nav class="navbar">
-<div class="logo">Adam & Saged</div>
-
-<div class="menu">
-<a href="#">الرئيسية</a>
-<a href="#about">من نحن</a>
-<a href="https://wa.me/201019201338">تواصل</a>
-</div>
-
-</nav>
 
 <header>
 
-<img src="logo.png">
+<img src="logo.png" class="logo">
 
-<h1>Adam & Saged Store</h1>
+<h1>ADAM & SAGED STORE</h1>
 
-<p>
-منتجات فاخرة للبنات بأفضل جودة وأحدث الموديلات.
-نسعد بخدمتكم ونسعى دائماً لتقديم تجربة تسوق مميزة.
+<p class="subtitle">
+
+Luxury For Girls ✨<br>
+
+أهلاً بكم في عالم الأناقة والجمال
+
 </p>
 
-<a class="btn" href="https://wa.me/201019201338">
-اطلب الآن عبر واتساب
+<div class="buttons">
+
+<a class="btn whatsapp" href="https://wa.me/201019201338">
+
+💬 اطلبي عبر واتساب
+
 </a>
+
+<a class="btn call" href="tel:01019201338">
+
+📞 اتصال مباشر
+
+</a>
+
+<a class="btn instagram"
+
+href="https://www.instagram.com/mony1051?igsh=a2hndTJrNDQ3dWJi">
+
+📸 Instagram
+
+</a>
+
+<a class="btn tiktok"
+
+href="https://www.tiktok.com/@adam_saged.store?_r=1&_t=ZS-98bd4BFJDgw">
+
+🎵 TikTok
+
+</a>
+
+</div>
 
 </header>
 
-<div class="section">
+<section class="cards">
+
 <div class="card">
 
-<h2>لماذا نحن؟</h2>
+<div class="icon">💎</div>
+
+<h3>جودة عالية</h3>
 
 <p>
-✔ خامات عالية الجودة<br><br>
 
-✔ أسعار مناسبة<br><br>
+نهتم بتقديم منتجات مختارة بعناية وجودة تليق بذوقك.
 
-✔ خدمة عملاء ممتازة<br><br>
-
-✔ اهتمام بأدق التفاصيل
 </p>
 
 </div>
+
+<div class="card">
+
+<div class="icon">🚚</div>
+
+<h3>شحن سريع</h3>
+
+<p>
+
+نوفر الشحن إلى جميع المحافظات بكل سهولة.
+
+</p>
+
+</div> <div class="card">
+
+<div class="icon">💜</div>
+
+<h3>أسعار مناسبة</h3>
+
+<p>
+
+أفضل قيمة مقابل الجودة مع عروض مستمرة.
+
+</p>
+
 </div>
+
+<div class="card">
+
+<div class="icon">⭐</div>
+
+<h3>رضا العملاء</h3>
+
+<p>
+
+هدفنا إن كل عميلة تكون سعيدة بتجربتها مع ADAM & SAGED STORE.
+
+</p>
+
+</div>
+
+</section>
 
 <footer>
 
-© Adam & Saged Store
+<p><strong>ADAM & SAGED STORE</strong></p>
+
+<p>Luxury For Girls</p>
+
+<p style="margin-top:10px;">
+
+📞 01019201338
+
+</p>
+
+<p style="margin-top:8px;">
+
+© 2026 جميع الحقوق محفوظة
+
+</p>
 
 </footer>
 
+<a class="floating"
+
+href="https://wa.me/201019201338">
+
+💬 تواصلي عبر واتساب
+
+</a>
+
 </body>
-  </html>
+
+</html>
+}
